@@ -1,0 +1,398 @@
+\documentclass[8pt]{beamer}
+
+%\usetheme{Warsaw}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usefonttheme{serif}
+
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ukrainian]{babel} 
+
+\numberwithin{figure}{section}
+\numberwithin{equation}{section}
+\setbeamertemplate{caption}[numbered]
+
+
+\title{Амплітудно-частотні характеристики шаруватих пластин і циліндричних оболонок зі складною геометрією напрямної}
+\author[Горячко Тарас Всеволодович]{{\large Горячко Тарас Всеволодович}\\[10mm]{\small Науковий керівник: доктор фізико-математичних наук, професор\\ Марчук М.В. }}
+\institute{Інститут прикладних проблем механіки і математики ім. Я. С. Підстригача \\ НАН України\\[\medskipamount]
+      \includegraphics[width=0.25\textwidth,height=0.2\textheight]{pic/ilogo.jpg}%
+}
+\date{}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\setbeamertemplate{footline}[frame number]
+
+\begin{frame}{Вступ}
+\begin{block}{Мета дисертаційної роботи}
+Метою дисертаційної роботи є розвиток методу збурень в поєднанні з методом скінченних елементів стосовно задач визначення аплітудно-частотних характеристик шаруватих пластин і циліндричних оболонок з складною геометрією напрямної за лінійних та геометрично  нелінійних коливань.
+\end{block}
+\begin{block}{Об’єкт дослідження}
+Процеси лінійних і геометрично нелінійних коливань шаруватих пластин і циліндричних оболонок зі складною геометрією напрямної.
+\end{block}
+\begin{block}{Предмет дослідження}
+Спектри власних частот та амплітудно-частотні залежності шаруватих пластин і циліндричних оболонок зі складною геометрією напрямної за лінійних та геометрично  нелінійних коливань.
+\end{block}
+\end{frame}
+
+\begin{frame}
+
+\begin{block}{Публікації та апробації за темою дисертації}
+За результатами досліджень опубліковано 19 наукових робіт, із них 5 статей у виданнях з переліку затвердженого ДАК МОН України, 6 статтей у збірниках матеріалів наукових конференцій, а також 6 публікацій у збірниках тез наукових конференцій. \\
+\textbf{Статті}
+\begin{enumerate}
+\item Marchuk M., Goriachko T., Pakosh V. Geometrically Nonlinear Free Transversal Vibrations of Thin-Walled Elongated Panels with Arbitrary Generatrix // Vibrations in Physical Systems. – 2014. – Vol. 26. – P. 153–160.
+\item Marchuk M., Goriachko T., Pakosh V. Natural Frequencies of Layered Elongated Cylindrical Panels for Geometrically Nonlinear Deformation at Discrete Consideration of Components // Vibrations in Physical Systems. – 2016. – Vol. 27. – P. 255–264.
+\end{enumerate}
+представлені у провідних світових наукометричних базах, зокрема у Scopus. \linebreak \linebreak
+\textbf{Матеріали досліджень доповідались на 12 міжнародних та Всеукраїнських наукових конференціях.}
+\end{block}
+
+\end{frame}
+
+\section{Розділ 1}
+
+\begin{frame}{Розділ 1. Основні методи і результати теоретичних досліджень за проблемою визначення  амплітудно-частотних характеристики шаруватих пластин і циліндричних оболонок за лінійного та геометрично нелінійного деформування.}
+\textbf{Огляд публікацій за проблемою теоретичного аналізу лінійних і нелінійних коливань оболонок і пластин}\\[3mm]
+\indent Дослідження процесів лінійних та нелінійних коливань тонкостінних елементів конструкцій із традиційних матеріалів було започатковано на основі використання класичної теорії, що базується на гіпотезі Кірхгофа-Лява. Фундаментальні результати в цьому напрямку отримані в працях  В.В. Болотіна, А.С. Вольміра, В.Т. Грінченка, Я.М. Григоренка, В.А. Криська, В.Д. Кубенка, Л.В. Курпи, С.П. Тимошенка та інших учених. 
+
+\medskip 
+Слід відмітити, що такий підхід дозволяє врахувати анізотропію фізико-механічних характеристик лише в тангенціальних напрямках, однак, не дозволяє дослідити вплив на амплітудно частотні характеристики  таких специфічних властивостей нових матеріалів - композитів, як податливість до трансверсальних зсуву та стиснення.
+
+\medskip Суттєві результати у вирішенні цієї проблеми містяться в роботах І. Альтенбаха, С.О. Амбарцумяна, І.М. Векуа, К.З. Галімова, Я.М. Григоренка, О.М. Гузя, В.С. Гудрамовича, Р. Міндліна, П. Нагді, Ю.В. Немировського, Б.Л Пелеха, В.Г. Піскунова, Е. Рейснера, М.А. Сухорольського, В.П. Тамужа, С.П. Тимошенка, Л.П. Хорошуна та інших учених.
+\end{frame}
+
+\begin{frame}{Розділ 1.}
+Дія інтенсивних динамічних (зокрема циклічних) експлуатаційних навантажень спричиняє поперечні переміщення в тонкостінних елементах, котрі співмірні з їхніми товщинами. Це зумовлює геометрично нелінійний характер їх деформованого стану. 
+\medskip 
+
+Постановкам задач про лінійній та геометрично нелінійні коливання пластин і оболонок та розробці методів їх розв'язання на основі застосування уточнених теорій присвячені праці О.І. Беспалової, В.В. Болотіна, А.С. Вольміра, В.Т. Грінченка, О.Я. Григоренка, Я.М. Григоренка, В.А. Криська, Л.В. Курпи, М.В. Марчука, Я.Г. Савули, В.І. Сторожева, С.П. Тимошенка, M. Amabili, J Awrejcewicz, I.K. Banerjee, I.C. Chen, Li. A. Dong, C.L. Dym, D.A. Evenren, P.B. Goncalves, E.L. Jansen, L. Librescu, F.M.A. Silva, M. Sundhakar, T. Ueda та інших учених.
+\medskip 
+
+Дослідження коливних процесів тонкостінних елементів на основі просторових співвідношень динамічної теорії пружності відображенні ????Альтенбах
+
+\medskip 
+Розробці та розвиненню методів розв'язування результуючих систем  нелінійних алгебнаїчних рівнянь присвячені роботи Бате,
+
+
+\end{frame}
+
+\section{Розділ 2}
+
+\begin{frame}{Розділ 2. РІВНЯННЯ ДИНАМІЧНО НАПРУЖЕНОГО СТАНУ ЗА ГЕОМЕТРИЧНО НЕЛІНІЙНОГО ДЕФОРМУВАННЯ}
+
+\textbf{2.1. Співвідношення просторової геометрично нелінійної динамічної теорії пружності в криволінійній системі координат
+}
+
+\begin{columns}
+	\begin{column}{0.35\linewidth}
+		\begin{figure}
+			\includegraphics[scale=0.15]{pic/layer.png}
+			\caption{Криволінійний пружний шар у декартовій системі координат}
+			\label{fig:21}
+		\end{figure}
+	\end{column}
+	\begin{column}{0.65\textwidth}
+    	\begin{center}
+	    	Напружено-деформований стан описується
+    	\end{center}
+\begin{align}
+\vec{u} &= u^i \vec{R_i}=u_i \vec{R^i}\\
+\hat{\varepsilon} &= \varepsilon^{ij} \vec{R_i}\vec{R_j}=\varepsilon_{ij} \vec{R^i}\vec{R^j}\\
+\hat{\Sigma} &= \sigma^{ij} \vec{R_i}\vec{R_j}=\sigma_{ij} \vec{R^i}\vec{R^j}\\
+\varepsilon_{ij} &= \frac{1}{2} \left( \nabla_i u_j + \nabla_j u_i + \nabla_i u^j \nabla_j u_k \right)\\
+\nabla_j u_i &= \frac{ \partial u_i }{ \partial \alpha_j } - u_k G ^k _{ij}\\
+G ^k _{ij} &= \frac12 \sum_{m=1}^{3} g^{km} 
+\left(
+\frac{\partial g_{im}}{\partial \alpha_j} + \frac{\partial g_{jm}}{\partial \alpha_i} - \frac{\partial g_{ij}}{\partial \alpha_m} 
+\right) \\
+\sigma^{ij} &= C^{ijkm}\varepsilon^{km}
+\end{align}
+	\end{column}
+\end{columns}
+
+
+\end{frame}
+
+\begin{frame}{Розділ 2}
+\emph{Рівняння руху точок шару}
+\begin{equation} \label{eq:P}
+div \hat{P} = \rho \frac{\partial^2 \vec{u}}{\partial t^2},
+\end{equation}
+де $\hat{P}$ --- перший несиметричний тензор Кірхгофа-Піоли, $\rho$ --- скалярне поле, яке визначає густину шару, $t$ --- змінна за часовою координатою.
+\linebreak 
+\linebreak 
+\emph{Граничні умови на лицевих поверхнях}
+\begin{equation}
+P^{3i}\left( \alpha_1, \alpha_2, \pm \frac{h}{2}, t \right) = X^{\pm}_{3i}\left( \alpha_1, \alpha_2, t \right).
+\end{equation}
+\linebreak
+\emph{Граничні умови на боковій поверхні} $\Omega = \Omega_{\sigma} + \Omega_{u} $
+\begin{align}
+P^{im}\left( \alpha_1, \alpha_2, \alpha_3, t \right)n_i &= f^{m}\left( \alpha_1, \alpha_2, \alpha_3, t \right), i=1,2,3, m=1,2,3, \left( \alpha_1, \alpha_2,\alpha_3\right)\in\Omega_{\sigma};\\
+u^{i}\left( \alpha_1, \alpha_2, \alpha_3, t \right) &=g^{i}\left( \alpha_1, \alpha_2, \alpha_3, t \right), i=1,2,3, \left( \alpha_1, \alpha_2,\alpha_3\right)\in\Omega_{u}.
+\end{align}
+
+\emph{Початкові умови}
+\begin{equation}
+u^{i}\vline _{t=t_0} = u^i_0 \left( \alpha_1, \alpha_2, \alpha_3 \right); \frac{\partial u^{i}}{\partial t}\vline _{t=t_0} =v^i_0 \left( \alpha_1, \alpha_2, \alpha_3 \right); i=1,2,3.
+\end{equation}
+
+\end{frame}
+
+\begin{frame}
+\textbf{2.2. Варіаційна постановка задачі}
+\begin{equation}
+\int_{V(t)} \delta\hat{E}:\hat{\tau}\,dV+\int_{V(t)} \rho \delta\vec{u} \frac{\partial^2 \vec{u}}{\partial t ^2}\,dV=\int_{\Omega_\sigma(t)} \delta\vec{u} \vec{f} \,dS
+\end{equation}
+
+\[
+\forall \delta\vec{u} \in D_A 
+= \{ 
+\vec{u}:\vec{u}\in W_2^{(2)}; 
+\vec{u}=\vec{g} \left( \alpha_1, \alpha_2,\alpha_3 \right) \in \Omega_{u}, \forall t \}
+\]
+
+\begin{tabbing}
+де \= $ W_2^{(2)}$ --- простір Соболєва,\\
+\> $\hat{\tau}$ --- тензор напружень Коші,\\
+\> $\vec{f}$ --- вектор поверхневих сил,\\
+\> $\delta\hat{E}$ --- тензор лінійних деформацій, який відповідає варіації переміщень.
+\end{tabbing}
+Оскільки $V(t)$ є невідомим, то в початковій (недеформованій) конфігурації:
+\begin{equation}\label{eq:virtwork_gen}
+\int_{V_0} \delta\hat{\varepsilon}:\hat{S}\,dV+\int_{V_0} \rho_0 \delta\vec{u} \frac{\partial^2 \vec{u}}{\partial t ^2}\,dV=\int_{\Omega_{\sigma0}} \delta\vec{u} \vec{f} \,dS
+\end{equation}
+
+\begin{tabbing}
+де \= $\hat{S}$ --- другий симетричний тензор напружень Кірхгофа-Піоли, \\для якого справедлива формула $\hat{S} = \hat{P} \left( \hat{F}^{-1} \right)^T $,\\
+\> $\hat{P}$ --- тензор з формули \ref{eq:P},\\
+\> $\hat{F}=\hat{G} + grad^T \vec{u}$ --- тензор градієнта локального руху,\\
+\> $\delta\hat{\varepsilon}$ --- тензор деформацій Гріна, який відповідає варіації переміщень.
+\end{tabbing}
+
+
+\end{frame}
+
+\begin{frame}
+\textbf{2.3. Компоненти тензора деформацій в довільній системі координат}
+\begin{equation}
+\vec{\nabla} \vec{u} =  
+B \cdot \tilde{u}
+\end{equation}
+де \\
+\begin{equation}
+\vec{\nabla} \vec{u} =  \left(
+\nabla_1 u_1  \nabla_2 u_1  \nabla_3 u_1 \nabla_1 u_2  \nabla_2 u_2  \nabla_3 u_2 
+\nabla_1 u_3  \nabla_2 u_3  \nabla_3 u_3 
+\right)^T
+\end{equation}
+\begin{equation}
+ \tilde{u} =  \left( u^1 
+\frac { \partial u^1 } { \partial \alpha_1} 
+\frac { \partial u^1 } { \partial \alpha_2} 
+\frac { \partial u^1 } { \partial \alpha_3} 
+u^2 
+\frac { \partial u^2 } { \partial \alpha_1} 
+\frac { \partial u^2 } { \partial \alpha_2} 
+\frac { \partial u^2 } { \partial \alpha_3} 
+u^3 
+\frac { \partial u^3 } { \partial \alpha_1} 
+\frac { \partial u^3 } { \partial \alpha_2} 
+\frac { \partial u^3 } { \partial \alpha_3} 
+\right)^T
+\end{equation}
+матриця $B$:
+\begin{equation}\label{eq:matrixB}
+B=
+\left[\begin{array}{cccccccccccc}
+-G_{11}^1 & 1 & 0 & 0 & -G_{11}^2 & 0 & 0 & 0 & -G_{11}^3 & 0 & 0 & 0\\
+-G_{12}^1 & 0 & 1 & 0 & -G_{12}^2 & 0 & 0 & 0 & -G_{12}^3 & 0 & 0 & 0\\
+-G_{13}^1 & 0 & 0 & 1 & -G_{13}^2 & 0 & 0 & 0 & -G_{13}^3 & 0 & 0 & 0\\
+-G_{21}^1 & 0 & 0 & 0 & -G_{21}^2 & 1 & 0 & 0 & -G_{21}^3 & 0 & 0 & 0\\
+-G_{22}^1 & 0 & 0 & 0 & -G_{22}^2 & 0 & 1 & 0 & -G_{22}^3 & 0 & 0 & 0\\
+-G_{23}^1 & 0 & 0 & 0 & -G_{23}^2 & 0 & 0 & 1 & -G_{23}^3 & 0 & 0 & 0\\
+-G_{31}^1 & 0 & 0 & 0 & -G_{31}^2 & 0 & 0 & 0 & -G_{31}^3 & 1 & 0 & 0\\
+-G_{32}^1 & 0 & 0 & 0 & -G_{32}^2 & 0 & 0 & 0 & -G_{32}^3 & 0 & 1 & 0\\
+-G_{33}^1 & 0 & 0 & 0 & -G_{33}^2 & 0 & 0 & 0 & -G_{33}^3 & 0 & 0 & 1
+\end{array}\right]
+\end{equation}
+
+\end{frame}
+
+\begin{frame}
+Формула для компонент тензора деформацій Гріна
+\begin{equation}
+\vec{\varepsilon}=\vec{e}+\vec{\eta}=\left(E + E_{NL}^{(1)} \left(\vec {\nabla} \vec{u} \right) \right)\vec {\nabla} \vec{u}=\left(E + E_{NL}^{(2)} \left(\vec {\nabla} \vec{u} \right) \right)\vec {\nabla} \vec{u}
+\end{equation}
+де 
+\begin{align}
+\vec{\varepsilon} = \left(
+\varepsilon_{11}\,
+\varepsilon_{22}\,
+\varepsilon_{33}\,
+2\varepsilon_{12}\,
+2\varepsilon_{13}\,
+2\varepsilon_{23}\,
+\right)^T,\\
+\vec{e} = \left( 
+e_{11}\,
+e_{22}\,
+e_{33}\,
+2e_{12}\,
+2e_{13}\,
+2e_{23}\,
+\right)^T,\\
+\vec{\eta} = \left( 
+\eta_{11}\,
+\eta_{22}\,
+\eta_{33}\,
+2\eta_{12}\,
+2\eta_{13}\,
+2\eta_{23}\,
+\right)^T,
+\end{align}
+матриця $E$:
+\begin{equation}
+E=\left[\begin{matrix}1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0\end{matrix}\right],
+\end{equation}
+
+
+\end{frame}
+
+\begin{frame}
+матриці $E_{NL}^{(1)}, E_{NL}^{(2)}$:
+\begin{equation}
+E_{NL}^{(1)}=\left[\begin{matrix}
+\frac{\lambda_{11}}{2} & 0 & 0 & \frac{\lambda_{21}}{2} & 0 & 0 & \frac{\lambda_{31}}{2} & 0 & 0\\
+0 & \frac{\lambda_{12}}{2} & 0 & 0 & \frac{\lambda_{22}}{2} & 0 & 0 & \frac{\lambda_{32}}{2} & 0\\
+0 & 0 & \frac{\lambda_{13}}{2} & 0 & 0 & \frac{\lambda_{23}}{2} & 0 & 0 & \frac{\lambda_{33}}{2}\\
+0 & \lambda_{11} & 0 & 0 & \lambda_{21} & 0 & 0 & \lambda_{31} & 0\\
+\lambda_{13} & 0 & 0 & \lambda_{23} & 0 & 0 & \lambda_{33} & 0 & 0\\
+0 & 0 & \lambda_{12} & 0 & 0 & \lambda_{22} & 0 & 0 & \lambda_{32}
+\end{matrix}\right],
+\end{equation}
+\begin{equation}
+E_{NL}^{(2)}=\left[\begin{matrix}
+\frac{\lambda_{11}}{2} & 0 & 0 & \frac{\lambda_{21}}{2} & 0 & 0 & \frac{\lambda_{31}}{2} & 0 & 0\\
+0 & \frac{\lambda_{12}}{2} & 0 & 0 & \frac{\lambda_{22}}{2} & 0 & 0 & \frac{\lambda_{32}}{2} & 0\\
+0 & 0 & \frac{\lambda_{13}}{2} & 0 & 0 & \frac{\lambda_{23}}{2} & 0 & 0 & \frac{\lambda_{33}}{2}\\
+\lambda_{12} & 0 & 0 & \lambda_{22} & 0 & 0 & \lambda_{32} & 0 & 0\\
+0 & 0 & \lambda_{11} & 0 & 0 & \lambda_{21} & 0 & 0 & \lambda_{31}\\
+0 & \lambda_{13} & 0 & 0 & \lambda_{23} & 0 & 0 & \lambda_{33} & 0
+\end{matrix}\right],
+\end{equation}
+де
+$ \lambda_{ij}=\sum_k g^{ik}\nabla_j u_k $.
+
+\end{frame}
+
+\begin{frame}
+\textbf{2.4. Фізичні компоненти переміщень і параметри Ламе}
+\linebreak
+\linebreak
+Змішана криволінійна ортогональна система координат:
+\begin{align}
+g_{11}=H_1^2; g_{22}=H_2^2; g_{33}=1; \\
+g_{ij}=0; i,j=1,2,3, i \ne j;
+\end{align}
+Довільна циліндрична система координат
+\begin{align}
+H_1 = H_1 \left( \alpha_1, \alpha_2, \alpha_3 \right) &= A \left( \alpha_1 \right) \left( 1+ \alpha_3 K \left( \alpha_1 \right) \right)  \\
+H_2 = H_2 \left( \alpha_1, \alpha_2, \alpha_3 \right) &= 1
+\end{align}
+
+\begin{tabbing}
+де \= $  A \left( \alpha_1 \right)$ --- коефіцієнт першої квадратичної форми серединної поверхні оболонки,\\
+\> $K \left( \alpha_1 \right)$ --- головна кривина напрямної??? в напрямку осі $\alpha_1$.
+\end{tabbing}
+тоді матриця $B$ \eqref{eq:matrixB}
+\begin{equation}
+\begin{aligned}
+B=\\
+\left[\begin{array}{cccccccccccc}0 & \frac{1}{A \left(1+ \alpha_{3} K \right)} & 0 & 0 & 0 & 0 & 0 & 0 & \frac{K}{1+ \alpha_{3} K } & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & \frac{1}{A \left(1+ \alpha_{3} K \right)} & 0 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\- \frac{K}{1+ \alpha_{3} K } & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{1}{A \left(1+ \alpha_{3} K \right)} & 0 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\end{array}\right]
+\end{aligned}
+\end{equation}
+
+\end{frame}
+
+
+\begin{frame}
+\textbf{2.5. Варіаційна постановка задачі відносно переміщень.}
+\begin{align}
+\int_{V_0} \delta\hat{\varepsilon}:\hat{S}\,dV=\int_{V_0} \delta\overline{u} ^T B ^T\left( E + E_{NL} \right)^T C \left( E + E_{NL}^{(1)} \right)B \overline{u} \, dV\\ \int_{V_0} \rho_0 \delta\tilde{u} ^T \frac{\partial^2 \tilde{u}}{\partial t ^2}\,dV=\int_{V_0} \rho_0 \delta\overline{u} ^T \tilde{B}^T \tilde{B}\frac{\partial^2 \overline{u}}{\partial t ^2}\,dV
+\end{align}
+Тоді \eqref{eq:virtwork_gen}:
+\begin{equation}
+\int_{V_0} \delta\overline{u} ^T B ^T\left( E + E_{NL} \right)^T C \left( E + E_{NL}^{(1)} \right)B \overline{u} \, dV+\int_{V_0} \rho_0 \delta\overline{u} ^T \tilde{B}^T \tilde{B}\frac{\partial^2 \overline{u}}{\partial t ^2}\,dV=F_{out}
+\end{equation}
+
+\end{frame}
+
+\begin{frame}
+\textbf{2.6. Побудова одновимірної моделі на основі двовимірної.}
+\linebreak
+\linebreak
+Апроксимація переміщень $u_1$ та $u_3$, за координатою $\alpha_3$ 
+\begin{align}
+u_1 \left( \alpha_1, \alpha_3 \right) = u_{10} \left( \alpha_1\right)p_0 \left( \alpha_3\right)+u_{11} \left( \alpha_1\right)p_1 \left( \alpha_3\right)+u_{12} \left( \alpha_1\right)p_2 \left( \alpha_3\right)\\
+u_3 \left( \alpha_1, \alpha_3 \right) = u_{30} \left( \alpha_1\right)p_0 \left( \alpha_3\right)+u_{31} \left( \alpha_1\right)p_1 \left( \alpha_3\right)+u_{32} \left( \alpha_1\right)p_2 \left( \alpha_3\right)
+\end{align}
+де поліноми $p_0$, $p_1$ та $p_2$ мають вигляд
+\begin{equation}
+p_0 \left( \alpha_3\right) = \frac12-\frac{\alpha_3}{h};
+p_1 \left( \alpha_3\right) = \frac12+\frac{\alpha_3}{h};
+p_2 \left( \alpha_3\right) = 1-\left(\frac{2\alpha_3}{h}\right)^2;
+\end{equation}
+$h$ --- товщина шару.
+\begin{figure}
+\includegraphics[scale=0.1]{pic/polin.png}
+\caption{Графіки поліномів $p_0$, $p_1$ та $p_2$ на проміжку [-0.5;0.5]}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\begin{equation}
+\begin{aligned}
+&\varepsilon_{ij} \left( \alpha_1, \alpha_3 \right) = \frac{\varepsilon_{ij0} \left( \alpha_1\right)p_0 \left( \alpha_3\right)+\varepsilon_{ij1} \left( \alpha_1\right)p_1 \left( \alpha_3\right)+\varepsilon_{ij2} \left( \alpha_1\right)p_2 \left( \alpha_3\right)}{1+\alpha_3 K},\\
+&\varepsilon_{ijk} = e_{ijk}\left( \alpha_1\right)+\eta_{ijk}\left( \alpha_1\right), i,j=1,3; k=0,1,2
+\end{aligned}
+\end{equation}
+
+\begin{tabbing}
+де \= $e_{ijk}\left( \alpha_1\right)$ --- лінійна складова,\\
+\> $\eta_{ijk}\left( \alpha_1\right)$ --- нелінійна складова.
+\end{tabbing}
+
+\begin{align}
+e_{11k}\left(\alpha_1\right)=\frac{1}{A\left(\alpha_1\right)}\frac{du_{1k}}{d\alpha_1}+u_{3k}K\left(\alpha_1\right), k=0,1,2
+\\
+\begin{split}
+e_{130}\left(\alpha_1\right)=u_{10}\left( -\frac{1}{h}-\frac{K\left( \alpha_1 \right)}{2} \right)+u_{11}\left( \frac{1}{h}-\frac{K\left( \alpha_1 \right)}{2} \right)+\\
++u_{12}\left( \frac{4}{h}-2K\left( \alpha_1 \right) \right) + \frac{1}{A\left(\alpha_1\right)}\frac{du_{30}}{d\alpha_1}
+\end{split}
+\\
+e_{131}\left(\alpha_1\right)&=u_{10}\left( -\frac{1}{h}-\frac{K\left( \alpha_1 \right)}{2} \right)+u_{11}\left( \frac{1}{h}-\frac{K\left( \alpha_1 \right)}{2} \right)+u_{12}\left( - \frac{4}{h}-2K\left( \alpha_1 \right) \right) + \frac{1}{A\left(\alpha_1\right)}\frac{du_{31}}{d\alpha_1}\\
+e_{132}\left(\alpha_1\right)&=\frac{1}{A\left(\alpha_1\right)}\frac{du_{32}}{d\alpha_1}+u_{12}K\left(\alpha_1\right), k=0,1,2
+\\
+e_{330}\left(\alpha_1\right)&=u_{30}\left( -\frac{1}{h}-\frac{K\left( \alpha_1 \right)}{2} \right)+u_{11}\left( \frac{1}{h}-\frac{K\left( \alpha_1 \right)}{2} \right)+u_{12}\left( \frac{4}{h}-2K\left( \alpha_1 \right) \right) + \frac{1}{A\left(\alpha_1\right)}\frac{du_{30}}{d\alpha_1}\\
+\end{align}
+
+\end{frame}
+
+\begin{frame}
+asd\begin{eqnarray}
+asd=asd_123\\dsa
+\end{eqnarray}
+\end{frame}
+
+\end{document}
