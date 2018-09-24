@@ -505,6 +505,7 @@ u_{32}
 
 \end{frame}
 
+\section{Розділ 3}
 \begin{frame}{Розділ 3. УЗАГАЛЬНЕНИЙ МЕТОД ЗБУРЕНЬ У ЗАДАЧАХ ПРО КОЛИВАННЯ}
 \textbf{3.1. Скінченно-елементні апроксимації для двовимірних моделей коливань товстостінних і тонкостінних оболонок і пластин.}
 \\
@@ -586,9 +587,127 @@ K_{NL}^{(2)}=\sum_{e=1}^{NM}
 
 \end{frame}
 
+\begin{frame}{Розділ 3}
+\textbf{3.4. Узагальнення методу збурень до розв’язання результуючої системи нелінійних алгебраїчних рівнянь.}
+\begin{equation}\label{eq:nonlineq}
+K_L\overline{U}+\mu \left( K_{NL}^{(1)}\left( \overline{U}\right)+K_{NL}^{(2)}\left( \overline{U},\overline{U}\right) \right)\overline{U}+M\ddot{\overline{U}}=0
+\end{equation}
+де $\mu \in [0;1]$ --- параметр збурення.
+\begin{equation}
+\overline{U}\left(t\right) =\overline{U}_0\left(t\right) + \mu \overline{U}_1\left(t\right) + O\left( \mu^2\right)
+\end{equation}
+Секулярний член
+\begin{equation}
+\overline{U}_S\left(t\right) =\begingroup\color{red}t\endgroup \sin \omega t
+\end{equation}
+Узагальнення методу збурень
+\begin{equation}
+K_L = K - \mu K_{L1} + O\left( \mu^2\right)
+\end{equation}
+Початкові умови
+\begin{align}
+\overline{U}\vline _{t=t_0}=\overline{A}\approx A\overline{\phi},\qquad \dot{\overline{U}}\vline _{t=t_0}=\overline{0}.
+\end{align}
+де $\overline{\phi}$ --- власний вектор лінійної задачі, для якого
+\begin{equation}\label{eq:lin_prop}
+\begin{aligned}
+\overline{\phi}^T K_L \overline{\phi} &= \omega_L^2\\
+\overline{\phi}^T M \overline{\phi} &= 1 
+\end{aligned}
+\end{equation}
+\end{frame}
+
+\begin{frame}{Розділ 3}
+\begin{gather}
+\label{eq:firstU0}
+K\overline{U}_0+M\ddot{\overline{U}}_0=0\\
+\label{eq:firstU1}
+K\overline{U}_1+M\ddot{\overline{U}}_1=K_{L1}\overline{U}_0-K_{NL}^{(1)}\left( \overline{U}_0 \right) \overline{U}_0-K_{NL}^{(2)}\left( \overline{U}_0,\overline{U}_0\right)\overline{U}_0
+\end{gather}
+Розв'язок \eqref{eq:firstU0}
+\begin{equation}
+\overline{U}_0=A\overline{\phi}\cos\omega t
+\end{equation}
+Тоді з \eqref{eq:lin_prop}
+\begin{equation}
+\omega^2=\overline{\phi}^T K \overline{\phi}
+\end{equation}
+
+Використавши
+\begin{equation}
+\cos^2 \omega t = \frac12 + \frac12 \cos 2 \omega t , \quad
+\cos^3 \omega t = \frac34 \cos \omega t + \frac14 \cos 3 \omega t,
+\end{equation}
+і представивши
+\begin{equation}
+K_{L1} = \frac34 K_{NL}^{(2)}\left( A\overline{\phi},A\overline{\phi} \right),
+\end{equation}
+Рівняння \eqref{eq:firstU1}:
+\begin{multline}\label{eq:secondU1}
+K\overline{U}_1+M\ddot{\overline{U}}_1=-\frac12 K_{NL}^{(1)}\left( A\overline{\phi} \right) A\overline{\phi} -\frac12 K_{NL}^{(1)}\left( A\overline{\phi} \right) A\overline{\phi} \cos 2\omega t -\\ - \frac14 K_{NL}^{(2)}\left( A\overline{\phi},A\overline{\phi}\right)A\overline{\phi} \cos 3\omega t
+\end{multline}
+
+\end{frame}
+
+
+\begin{frame}{Розділ 3}
+Розв'язки \eqref{eq:secondU1}:
+\begin{align}
+\overline{U}_1^{(1)}&=x_1\overline{\phi}\\
+\overline{U}_1^{(2)}&=x_2\overline{\phi}\cos 2\omega t\\
+\overline{U}_1^{(3)}&=x_3\overline{\phi}\cos 3\omega t
+\end{align}
+де
+\begin{align}
+x_1&=-\frac{1}{2\omega ^2}\overline{\phi}^T K_{NL}^{(1)}\left( A\overline{\phi} \right) A\overline{\phi}\\
+x_2&=\frac{1}{6\omega ^2}\overline{\phi}^T K_{NL}^{(1)}\left( A\overline{\phi} \right) A\overline{\phi}\\
+x_3&=\frac{1}{32\omega ^2}\overline{\phi}^T K_{NL}^{(2)}\left( A\overline{\phi},A\overline{\phi} \right) A\overline{\phi}
+\end{align}
+Загальний розв'язок \eqref{eq:nonlineq}:
+\begin{equation}
+\overline{U}\left(t\right)=\left[\left(A-x_1-x_2-x_3\right)\cos \omega t + x_1+x_2\cos 2 \omega t+x_3\cos 3 \omega t\right]\overline{\phi}
+\end{equation}
+\end{frame}
+
+\begin{frame}{Розділ 3}
+Алгоритм відшукання розв'язку:
+\begin{enumerate}
+	\item Розв’язання лінійної задачі:
+	$K_L\overline{\phi}+\omega_L^2 M \overline{\phi}=0$
+ 
+	\item Апроксимація початкової умови $\overline{A}\approx A\overline{\phi}$: 
+	$\displaystyle A=\min_{C \in R} ||\overline{A}-C\overline{\phi}||$
+	\item Обчислення матриці:
+	$K = K_L + \frac34 K_{NL}^{(2)}\left( A\overline{\phi},A\overline{\phi} \right) $
+	\item Знаходження власної частоти $\omega$ геометрично нелінійних коливань:
+	\[\omega^2=\overline{\phi}^T K \overline{\phi}\]
+	\item Визначення амплітуд:
+ \begin{align*}
+x_1&=-\frac{1}{2\omega ^2}\overline{\phi}^T K_{NL}^{(1)}\left( A\overline{\phi} \right) A\overline{\phi}\\
+x_2&=\frac{1}{6\omega ^2}\overline{\phi}^T K_{NL}^{(1)}\left( A\overline{\phi} \right) A\overline{\phi}\\
+x_3&=\frac{1}{32\omega ^2}\overline{\phi}^T K_{NL}^{(2)}\left( A\overline{\phi},A\overline{\phi} \right) A\overline{\phi}
+\end{align*}
+	\item Наближений розв'язок:
+	\[
+	\overline{U}\left(t\right)=\left[\left(A-x_1-x_2-x_3\right)\cos \omega t + x_1+x_2\cos 2 \omega t+x_3\cos 3 \omega t\right]\overline{\phi}
+	\]
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Розділ 3}
+\textbf{3.6. Висновки до розділу 3}
+\\
+\vspace{1em}
+На основі застосування двовимірної схеми МСЕ, отримано, у матричному вигляді, системи нелінійних алгебраїчних рівнянь відносно векторів вузлових переміщень, через які визначаються амплітудно-частотні характеристики криволінійного пружного шару. \\
+Аналогічним чином застосовано МСЕ до одновимірної варіаційної задачі та отримано однотипну систему нелінійних алгебраїчних рівнянь. Виведені аналітичні формули для коефіцієнтів лінійних і нелінійних матриць жорсткості та мас, які дозволяють проводити їх швидке обчислення.\\
+ Для розв'язання отриманих систем узагальнено метод збурень. На цій основі розроблено алгоритм знаходження скінченної кількості перших форм і значень власних частот. 
+
+\end{frame}
+
 \begin{frame}{Розділ 2}
 Марчук М. В., Пакош В. С. Амплітудно-частотні залежності за нелінійних коливань податливих трансверсальним зсуву та стисненню композитних пластин //Математичні проблеми механіки неоднорідних структур.–Львів. – 2006. – Т. 2. – С. 132-135.
 
 \end{frame}
+
 
 \end{document}
