@@ -33,7 +33,7 @@
 
 \begin{frame}{Вступ}
 \begin{block}{Мета дисертаційної роботи}
-Розвиток методу збурень в поєднанні з методом скінченних елементів стосовно задач визначення аплітудно-частотних характеристик шаруватих пластин і циліндричних оболонок з складною геометрією напрямної за лінійних та геометрично  нелінійних коливань.
+Розвиток методу збурень в поєднанні з методом скінченних елементів стосовно задач визначення амплітудно-частотних характеристик шаруватих пластин і циліндричних оболонок з складною геометрією напрямної за лінійних та геометрично  нелінійних коливань.
 \end{block}
 \begin{block}{Об’єкт дослідження}
 Процеси лінійних і геометрично нелінійних коливань шаруватих пластин і циліндричних оболонок зі складною геометрією напрямної.
@@ -505,6 +505,86 @@ u_{32}
 
 \end{frame}
 
+\begin{frame}{Розділ 3. УЗАГАЛЬНЕНИЙ МЕТОД ЗБУРЕНЬ У ЗАДАЧАХ ПРО КОЛИВАННЯ}
+\textbf{3.1. Скінченно-елементні апроксимації для двовимірних моделей коливань товстостінних і тонкостінних оболонок і пластин.}
+\\
+\vspace{1em}
+\begin{equation}
+\sum_{e=1}^{NM}\int_{V^{(e)}}  \left[ \delta\overline{u} ^T B ^T\left( E + E_{NL} \right)^T C \left( E + E_{NL}^{(1)} \right)B \overline{u} + \rho_0 \delta\overline{u} ^T \tilde{B}^T \tilde{B}\frac{\partial^2 \overline{u}}{\partial t ^2} \right] \,dV=0
+\end{equation}
+Апроксимації переміщень на скінченному елементі $V^{(e)}$:
+\begin{equation}
+\begin{aligned}
+\varphi_0&=\frac{1}{4}\left(1-\xi\right)\left(1+\eta\right) & \varphi_1 &=\frac{1}{4}\left(1+\xi\right)\left(1+\eta\right)\\
+\varphi_2&=\frac{1}{4}\left(1+\xi\right)\left(1-\eta\right) & \varphi_3 &=\frac{1}{4}\left(1-\xi\right)\left(1-\eta\right)
+\end{aligned}
+\end{equation}
+де $\xi \in [-1;1], \eta \in [-1;1]$
+
+\end{frame}
+
+\begin{frame}{Розділ 3}
+\begin{equation}
+K_L\overline{U}+\left( K_{NL}^{(1)}\left( \overline{U}\right)+K_{NL}^{(2)}\left( \overline{U},\overline{U}\right) \right)\overline{U}+M\ddot{\overline{U}}=0
+\end{equation}
+де 
+\begin{gather}
+M=\sum_{e=1}^{NM}
+\left[ \int\limits_{-1}^{1} \int\limits_{-1}^{1} \rho_0 {H^{(e)}}^T \tilde{B}^T \tilde{B} H^{(e)} J^{(e)} \, d\xi \, d\eta \right]\\
+K_L=\sum_{e=1}^{NM}
+\left[ \int\limits_{-1}^{1} \int\limits_{-1}^{1} {H^{(e)}}^T B^T E^T C E B H^{(e)} J^{(e)} \, d\xi \, d\eta \right]\\
+K_{NL}^{(1)}=\sum_{e=1}^{NM}
+\left[ 
+\begin{aligned}
+\int\limits_{-1}^{1} \int\limits_{-1}^{1} {H^{(e)}}^T B^T E_{NL}\left( \overline{U}\right)^T C E B H^{(e)} J^{(e)} \, d\xi \, d\eta + \\ 
++ \int\limits_{-1}^{1} \int\limits_{-1}^{1} {H^{(e)}}^T B^T E^T C E_{NL}^{(1)}\left( \overline{U}\right) B H^{(e)} J^{(e)} \, d\xi \, d\eta 
+\end{aligned} 
+\right]\\
+K_{NL}^{(2)}=\sum_{e=1}^{NM}
+\left[ 
+\int\limits_{-1}^{1} \int\limits_{-1}^{1} {H^{(e)}}^T B^T E_{NL}\left( \overline{U}\right)^T C E_{NL}^{(1)}\left( \overline{U}\right) B H^{(e)} J^{(e)} \, d\xi \, d\eta 
+\right]
+\end{gather}
+
+\end{frame}
+
+\begin{frame}{Розділ 3}
+\textbf{3.3. Метод скінченних елементів стосовно одновимірної моделі.}
+\\
+\vspace{1em}
+Апроксимації переміщень на одновимірному скінченному елементі $V^{(e)} = [\alpha_{1s};\alpha_{1e}]$:
+\begin{equation}
+\begin{aligned}
+\varphi_0&=\frac{1}{2}\left(1-\xi\right) & \varphi_1 &=\frac{1}{2}\left(1+\xi\right)
+\end{aligned}
+\end{equation}
+де $\xi \in [-1;1]$
+\end{frame}
+
+\begin{frame}{Розділ 3}
+\begin{equation}
+K'_L\overline{U}'+\left( K_{NL}'^{(1)}\left( \overline{U}'\right)+K_{NL}'^{(2)}\left( \overline{U}',\overline{U}'\right) \right)\overline{U}'+M'\ddot{\overline{U}}'=0
+\end{equation}
+де 
+\begin{gather}
+M'=\sum_{e=1}^{N}
+\left[ \int\limits_{-1}^{1} \rho_0 {H'^{(e)}}^T B' H'^{(e)} J'^{(e)} A\left(\xi\right) \, d\xi \right]\\
+K'_L=\sum_{e=1}^{N}
+\left[ \int\limits_{-1}^{1}{H'^{(e)}}^T E'^T C' E' H'^{(e)} J'^{(e)} A\left(\xi\right) \, d\xi \right]\\
+K_{NL}'^{(1)}=\sum_{e=1}^{N}
+\left[ 
+\begin{aligned}
+\int\limits_{-1}^{1} {H'^{(e)}}^T E'_{NL}\left( \overline{U}'\right)^T C' E' H'^{(e)} J'^{(e)} A\left(\xi\right) \, d\xi  + \\ 
++ \int\limits_{-1}^{1} {H'^{(e)}}^T E'^T C' E_{NL}'^{(1)}\left( \overline{U}'\right) H'^{(e)} J'^{(e)} A\left(\xi\right) \, d\xi 
+\end{aligned} 
+\right]\\
+K_{NL}^{(2)}=\sum_{e=1}^{NM}
+\left[ 
+\int\limits_{-1}^{1} \int\limits_{-1}^{1} {H^{(e)}}^T B^T E_{NL}\left( \overline{U}\right)^T C E_{NL}^{(1)}\left( \overline{U}\right) B H^{(e)} J^{(e)} \, d\xi \, d\eta 
+\right]
+\end{gather}
+
+\end{frame}
 
 \begin{frame}{Розділ 2}
 Марчук М. В., Пакош В. С. Амплітудно-частотні залежності за нелінійних коливань податливих трансверсальним зсуву та стисненню композитних пластин //Математичні проблеми механіки неоднорідних структур.–Львів. – 2006. – Т. 2. – С. 132-135.
