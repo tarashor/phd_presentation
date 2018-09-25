@@ -332,7 +332,7 @@ B=
 \int_{V_0} \delta\hat{\varepsilon}:\hat{S}\,dV=\int_{V_0} \delta\overline{u} ^T B ^T\left( E + E_{NL} \right)^T C \left( E + E_{NL}^{(1)} \right)B \overline{u} \, dV\\ \int_{V_0} \rho_0 \delta\tilde{u} ^T \frac{\partial^2 \tilde{u}}{\partial t ^2}\,dV=\int_{V_0} \rho_0 \delta\overline{u} ^T \tilde{B}^T \tilde{B}\frac{\partial^2 \overline{u}}{\partial t ^2}\,dV
 \end{align}
 Тоді \eqref{eq:virtwork_gen}:
-\begin{multline}
+\begin{multline} \label{eq:virtwork_gen_u}
 \int_{V_0} \delta\overline{u} ^T B ^T\left( E + E_{NL} \right)^T C \left( E + E_{NL}^{(1)} \right)B \overline{u} \, dV+\\+\int_{V_0} \rho_0 \delta\overline{u} ^T \tilde{B}^T \tilde{B}\frac{\partial^2 \overline{u}}{\partial t ^2}\,dV=F_{out}
 \end{multline}
 
@@ -511,6 +511,10 @@ u_{32}
 \\
 \vspace{1em}
 \begin{equation}
+V=\bigcup\limits_{e=1}^{NM} V^{(e)}
+\end{equation}
+Тоді \eqref{eq:virtwork_gen_u}
+\begin{equation}
 \sum_{e=1}^{NM}\int_{V^{(e)}}  \left[ \delta\overline{u} ^T B ^T\left( E + E_{NL} \right)^T C \left( E + E_{NL}^{(1)} \right)B \overline{u} + \rho_0 \delta\overline{u} ^T \tilde{B}^T \tilde{B}\frac{\partial^2 \overline{u}}{\partial t ^2} \right] \,dV=0
 \end{equation}
 Апроксимації переміщень на скінченному елементі $V^{(e)}$:
@@ -553,6 +557,9 @@ K_{NL}^{(2)}=\sum_{e=1}^{NM}
 \textbf{3.3. Метод скінченних елементів стосовно одновимірної моделі.}
 \\
 \vspace{1em}
+\begin{equation}
+V=\bigcup\limits_{e=1}^{N} V^{(e)}
+\end{equation}
 Апроксимації переміщень на одновимірному скінченному елементі $V^{(e)} = [\alpha_{1s};\alpha_{1e}]$:
 \begin{equation}
 \begin{aligned}
