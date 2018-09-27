@@ -11,10 +11,11 @@
 
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[ukrainian]{babel} 
+\usepackage[english,ukrainian]{babel} 
 
 \numberwithin{figure}{section}
 \numberwithin{equation}{section}
+\numberwithin{table}{section}
 \setbeamertemplate{caption}[numbered]
 
 
@@ -781,16 +782,129 @@ A\left( \alpha_1 \right)=1, \quad K\left( \alpha_1 \right)=0.
 
 \begin{gather*}
 l=1\text{м}, h=0.1\text{м},\\
-E_1=E, v_{13}=v_{31}=0.3, G_{13}=G
+E_1=E, v_{13}=v_{31}=0.3, G_{13}=G;
 \end{gather*}
 
 \begin{figure}
 	\includegraphics[scale=0.3]{pic/plate.png}
 		\caption{Пластина-смуга з защемленими краями}
-		\label{fig:21}
+		\label{fig:plate}
+\end{figure}
+
+
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+
+\textbf{\textit{4.1.1.1 Лінійні коливання}}
+
+\begin{figure}
+	\includegraphics[scale=0.23]{pic/conv_all.png}
+		\caption{Збіжність значення мінімальної частоти при збільшенні кількості скінченних елементів вздовж осі $\alpha_3$ з врахуванням стиснення $\frac{E_1}{E_3}\rightarrow1$}
+		\label{fig:EE31}
 \end{figure}
 
 \end{frame}
+
+\begin{frame}{Розділ 4}
+\begin{figure}
+	\includegraphics[scale=0.23]{pic/conv_all_e3.png}
+		\caption{Збіжність значення мінімальної частоти при збільшенні кількості скінченних елементів вздовж осі $\alpha_3$ без врахування стиснення $\frac{E_1}{E_3}\rightarrow0$}
+		\label{fig:EE30}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+\begin{figure}
+	\includegraphics[scale=0.23]{pic/shear_inf.png}
+		\caption{Вплив значення модуля трансверсального зсуву на власну мінімальну частоту $G_{13}=\frac{G}{k}$}
+		\label{fig:shear}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+
+\textbf{\textit{4.1.1.2 Геометрично нелінійні коливання}}
+\begin{figure}
+	\includegraphics[scale=0.2]{pic/lin_nonlin_time_w2h.png}
+		\caption{Лінійні ($\bullet $) і нелінійні ($ \triangledown $) вільні коливання точки панелі з координатами $(\frac{l}{2};0)$ при $w_{max}=2h$.}
+		\label{fig:nonlin_time}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+Співвідношення для визначення власної частоти геометрично нелінійних вільних коливань
+\begin{equation}
+\omega^2=\overline{\phi}^T K \overline{\phi}, \quad K = K_L + \frac34 K_{NL}^{(2)}\left( A\overline{\phi},A\overline{\phi} \right).
+\end{equation}
+
+Тоді
+\begin{equation}
+\omega^2=\omega_0^2\left(1+\frac{3}{4}R\left(\frac{w_{max}}{h}\right)^2\right)
+\end{equation}
+
+\begin{tabbing}
+де \= $\omega_0^2$ --- лінійна власна частота,\\
+\> $\omega^2$ --- нелінійна власна частота.
+\end{tabbing}
+
+\begin{equation}
+R=\frac{\overline{\phi}^T K_{NL}^{(2)}\left( h\overline{\phi}',h\overline{\phi}' \right) \overline{\phi}}{\omega_0^2}
+\end{equation}
+
+\begin{tabbing}
+де \= $\overline{\phi}'$ --- нормований власний вектор $\overline{\phi}$.
+\end{tabbing}
+
+\begin{table}[h!]
+\centering
+ \begin{tabular}{| l | c |} 
+ \hline
+ & $R$ \\ 
+ \hline
+ Аналітичне значення & 0.8363 \\ 
+ \hline
+ Зсувна модель Тимошенко & 0.8694 \\ 
+ \hline
+ Модель на основі квадратичних апроксимацій & 1.4586 \\ 
+ \hline
+ Модель на основі просторової теорії & 3.2488 \\
+ \hline
+\end{tabular}
+\caption{Значення параметра $R$ для різних моделей панелі, видовжені краї якої защемлені}
+\label{table:1}
+\end{table}
+
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+
+\begin{figure}
+	\includegraphics[scale=0.2]{pic/AFRC1.png}
+		\caption{Амплітудно-частотні характеристики, отримані за допомогою узагальненого методу збурень для панелі, видовжені краї якої защемлені}
+		\label{fig:AFR_C}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+
+\begin{figure}
+	\includegraphics[scale=0.2]{pic/AFRC2.png}
+		\caption{Амплітудно-частотні характеристики, отримані за допомогою вдосконаленого методу збурень для панелі, видовжені краї якої закріплені на нерухомих шарнірах}
+		\label{fig:AFR_H}
+\end{figure}
+
+
+\end{frame}
+
+
 
 %\begin{frame}{Розділ 2}
 %Марчук М. В., Пакош В. С. Амплітудно-частотні залежності за нелінійних коливань податливих трансверсальним зсуву та стисненню композитних пластин //Математичні проблеми механіки неоднорідних структур.–Львів. – 2006. – Т. 2. – С. 132-135.
