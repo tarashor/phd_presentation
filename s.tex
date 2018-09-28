@@ -860,13 +860,17 @@ R=\frac{\overline{\phi}^T K_{NL}^{(2)}\left( h\overline{\phi}',h\overline{\phi}'
 де \= $\overline{\phi}'$ --- нормований власний вектор $\overline{\phi}$.
 \end{tabbing}
 
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
 \begin{table}[h!]
 \centering
  \begin{tabular}{| l | c |} 
  \hline
  & $R$ \\ 
  \hline
- Аналітичне значення & 0.8363 \\ 
+ Аналітичне значення\footnotemark & 0.8363 \\ 
  \hline
  Зсувна модель Тимошенко & 0.8694 \\ 
  \hline
@@ -878,9 +882,12 @@ R=\frac{\overline{\phi}^T K_{NL}^{(2)}\left( h\overline{\phi}',h\overline{\phi}'
 \caption{Значення параметра $R$ для різних моделей панелі, видовжені краї якої защемлені}
 \label{table:1}
 \end{table}
-
+\footnotetext[1]{Marchuk M., Pakosh V., Lesyk O., Hurayewska I. Influence of Pliability to Transversal Deformations of Shear and Compression on Correlation Frequency from Amplitude for Nonlinear Oscillations of Composite Plates // Vibrations in Physical Systems. - 2006. - Vol. XXII. - P. 251-256.}
 
 \end{frame}
+
+
+
 
 \begin{frame}{Розділ 4}
 
@@ -904,12 +911,45 @@ R=\frac{\overline{\phi}^T K_{NL}^{(2)}\left( h\overline{\phi}',h\overline{\phi}'
 
 \end{frame}
 
+\begin{frame}{Розділ 4}
+\textbf{\textit{4.1.2 Тришарова пластина-смуга}}
+\\
+Умови контакту між шарами
+\begin{gather}
+u_i^{(k-1)}\left(\alpha_1, h_{k-1},t \right)=u_i^{(k)}\left(\alpha_1, h_{k},t \right),\\
+S^{(k-1)3i}\left(\alpha_1, h_{k-1},t \right)=S^{(k)3i}\left(\alpha_1, h_{k},t \right),
+\end{gather}
+\[ i=1,3, \alpha_1 \in [0;L], k=2,\dots,N.\]
+Граничні умови на лицевих площинах панелі
+\begin{equation}
+S^{(m)31}\left(\alpha_1, h_{m},t \right)=S^{(m)33}\left(\alpha_1, h_{m},t \right)=0,\alpha_1 \in [0;L], m=0,N.
+\end{equation}
+
+\begin{figure}
+	\includegraphics[scale=0.5]{pic/plate3layers.png}
+		\caption{Тришарова пластина-смуга з нерухомими шарнірами на нижніх ребрах видовжених країв}
+		\label{fig:AFR_H}
+\end{figure}
 
 
-%\begin{frame}{Розділ 2}
-%Марчук М. В., Пакош В. С. Амплітудно-частотні залежності за нелінійних коливань податливих трансверсальним зсуву та стисненню композитних пластин //Математичні проблеми механіки неоднорідних структур.–Львів. – 2006. – Т. 2. – С. 132-135.
-%
-%\end{frame}
+\end{frame}
+
+
+\begin{frame}{Розділ 4}
+\begin{table}[h!]
+\centering
+ \begin{tabular}{| c | c | c | c | c | c | c | c |} 
+ \hline
+ $\displaystyle \frac{h_{R}}{h}$ & 1 & 0.95 & 0.9 & 0.8 & 0.6 & 0.4 & 0 \\ 
+  \hline
+ $\omega_0$, Гц & 25.061 & 72.121 & 69.587 & 69.056 & 84.453 & 111.765 & 375.763 \\
+   \hline
+\end{tabular}
+\caption{Вплив товщини шару гуми ($h_{R}$) на мінімальну власну частоту}
+\label{table:1}
+\end{table}
+
+\end{frame}
 
 
 \end{document}
