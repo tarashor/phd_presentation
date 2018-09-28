@@ -18,6 +18,7 @@
 \numberwithin{table}{section}
 \setbeamertemplate{caption}[numbered]
 
+\usepackage[justification=centering]{caption}
 
 
 \title{Амплітудно-частотні характеристики шаруватих пластин і циліндричних оболонок зі складною геометрією напрямної}
@@ -940,16 +941,106 @@ S^{(m)31}\left(\alpha_1, h_{m},t \right)=S^{(m)33}\left(\alpha_1, h_{m},t \right
 \centering
  \begin{tabular}{| c | c | c | c | c | c | c | c |} 
  \hline
- $\displaystyle \frac{h_{R}}{h}$ & 1 & 0.95 & 0.9 & 0.8 & 0.6 & 0.4 & 0 \\ 
+ $\displaystyle \frac{h_{r}}{h}$ & 1 & 0.95 & 0.9 & 0.8 & 0.6 & 0.4 & 0 \\ 
   \hline
  $\omega_0$, Гц & 25.061 & 72.121 & 69.587 & 69.056 & 84.453 & 111.765 & 375.763 \\
    \hline
 \end{tabular}
-\caption{Вплив товщини шару гуми ($h_{R}$) на мінімальну власну частоту}
-\label{table:1}
+\caption{Вплив товщини шару гуми ($h_{r}$) на мінімальну власну частоту}
+\label{table:2}
+\end{table}
+
+\begin{table}[h!]
+\centering
+ \begin{tabular}{| c | c | c | c | c | c | c | c |} 
+ \hline
+ $\displaystyle \frac{h_{r}}{h}$ & 1 & 0.95 & 0.9 & 0.8 & 0.6 & 0.4 & 0 \\ 
+  \hline
+ $R$, Гц & 16.1053 & 44.0470 & 73.2043 & 104.7005 & 92.1796 & 59.2721 & 5.7266 \\
+   \hline
+\end{tabular}
+\caption{Вплив товщини шару гуми ($h_{r}$) на значення параметра нелінійності $R$}
+\label{table:3}
 \end{table}
 
 \end{frame}
 
+\begin{frame}{Розділ 4}
+
+\begin{figure}
+	\includegraphics[scale=0.2]{pic/AFR_layered2.png}
+		\caption{Амплітудно-частотні характеристики для тришарової панелі з нерухомими шарнірами на видовжених краях для різних значень $h_{r}$}
+		\label{fig:AFR_layers}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+\textbf{4.2. Видовжена циліндрична панель}
+\begin{equation}
+A\left( \alpha_1 \right)=1, \quad K\left( \alpha_1 \right)=\frac{1}{R}.
+\end{equation}
+\begin{figure}
+	\includegraphics[scale=0.2]{pic/AFR_curvature.png}
+		\caption{Амплітудно-частотні характеристики для панелі з вуглепластика з для різних значень кривини напрямної $K$}
+		\label{fig:AFR_layers}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=\linewidth]{pic/def_K_08.png} \\ а)}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=\linewidth]{pic/def_K_2.png} \\ б)}
+\end{minipage}
+\caption{Перша мода циліндричної панелі з вуглепластику для різної кривизни: а)$K=0.8\text{м}^{-1}$; б)   $K=2\text{м}^{-1}$;}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=\linewidth]{pic/def_K_08_2.png} \\ а)}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=\linewidth]{pic/def_K_08_3.png} \\ б)}
+\end{minipage}
+\caption{Вигляд циліндричної панелі $K=0.8\text{м}^{-1}$ з вуглепластику в різних модах: а) – перша мода; б) – друга;}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+
+\begin{figure}
+	\includegraphics[scale=0.2]{pic/thickness_curvature_contour_plot2.png}
+		\caption{Залежність найменшої власної частоти від радіуса кривини $K$ і товщини $h$ циліндричної панелі}
+		\label{fig:omage_K_h}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Розділ 4}
+\textbf{Висновки до розділу 4}\\
+\vspace{1em}
+\begin{itemize}
+\item На основі розробленого алгоритму (методики) досліджено лінійні і геометрично нелінійні коливання одношарових та тришарових пластин-смуг.
+\item Отримані числові результати дозволили встановити його ефективність шляхом його порівняння з розв'язками, отриманими іншими авторами.
+\item Досліджено вплив податливості до трансверсьного зсуву на мінімальну власну частоту одношарової пластини-смуги.
+\item Отримано аналітичну формулу для обчислення першої власної частоти за нелінійних коливань одношарової пластини смуги через значення лінійної власної частоти, нелінійної матриці жорсткості та лінійних власних векторів.
+\item У випадку тришарової пластини смуги, що складається двох металевих лицевих та гумового середнього елементів, встановлено, що зі зростанням товщини гумового шару, мінімальна лінійна власна частота спадає. Встановлено, що максимальне значення нелінійної  першої власної частоти досягається при 80\% заповнені пластини смуги гумовим складником. 
+\item Для циліндричної панелі встановлено, що зі зростанням кривизни вона стає менш жорсткою за нелінійних коливань. 
+\end{itemize}
+
+\end{frame}
 
 \end{document}
