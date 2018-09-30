@@ -927,18 +927,25 @@ S^{(k-1)3i}\left(\alpha_1, h_{k-1},t \right)=S^{(k)3i}\left(\alpha_1, h_{k},t \r
 \begin{equation}
 S^{(m)31}\left(\alpha_1, h_{m},t \right)=S^{(m)33}\left(\alpha_1, h_{m},t \right)=0,\alpha_1 \in [0;L], m=0,N.
 \end{equation}
-
-\begin{figure}
-	\includegraphics[scale=0.5]{pic/plate3layers.png}
-		\caption{Тришарова пластина-смуга з нерухомими шарнірами на нижніх ребрах видовжених країв}
-		\label{fig:AFR_H}
-\end{figure}
+Розглянуто пластину з геометричним та механічними характеристиками
+\begin{gather*}
+L=1\text{м}, h=0.1\text{м};\\
+\text{Гума:}\qquad
+E_1=E_3=210\cdot 10^{9} Па, v_{13}=v_{31}=0.3, \rho=8000 кг/м^3;\\
+\text{Сталь:}\qquad
+E_1=E_3=0.1\cdot 10^{9} Па, v_{13}=v_{31}=0.48, \rho=1200 кг/м^3.
+\end{gather*}
 
 
 \end{frame}
 
 
 \begin{frame}{Розділ 4}
+
+\begin{figure}
+	\includegraphics[scale=0.5]{pic/plate3layers.png}
+		\caption{Тришарова пластина-смуга з нерухомими шарнірами на нижніх ребрах видовжених країв}
+\end{figure}
 \begin{table}[h!]
 \centering
  \begin{tabular}{| c | c | c | c | c | c | c | c |} 
@@ -1071,9 +1078,22 @@ x_3&=\left(R + g_{A}\cos\left(g_v\theta\right) \right)\sin\left(\theta\right),
 \end{frame}
 
 \begin{frame}{Розділ 5}
+
 \begin{figure}
-	\includegraphics[scale=0.2]{pic/cor_geom.png}
+	\includegraphics[width=0.8\linewidth]{pic/cor_geomR.png}\\
+	\includegraphics[width=0.8\linewidth]{pic/cor_geom_zoomedR.png}
 		\caption{Напрямна серединної поверхні шару в декартовій системі координат за $g_v=20$.}
+		\label{fig:omage_K_h}
+\end{figure}
+
+
+
+\end{frame}
+
+\begin{frame}{Розділ 5}
+\begin{figure}
+	\includegraphics[scale=0.2]{pic/cor_R1R32.png}
+		\caption{Вектори коваріантної бази $\vec{R}_1$ (червоний колір) і $\vec{R}_3$ (синій колір) на верхній лицевій поверхні $L=2\text{м}, h=0.05\text{м},R=1.25\text{м},g_A=0.03\text{м}, g_v=20$.}
 \end{figure}
 
 Радіус вектор до будь-якої точки панелі
@@ -1091,14 +1111,6 @@ x_3&=\left(R + g_{A}\cos\left(g_v\theta\right) \right)\sin\left(\theta\right),
 \vec{R}_2 &= \vec{e}_2,\\
 \vec{R}_3 &= \vec{n}.
 \end{align}
-
-\end{frame}
-
-\begin{frame}{Розділ 5}
-\begin{figure}
-	\includegraphics[scale=0.2]{pic/cor_R1R3.png}
-		\caption{Вектори коваріантної бази $\vec{R}_1$ (червоний колір) і $\vec{R}_3$ (синій колір) на верхній лицевій поверхні $L=2\text{м}, h=0.05\text{м},R=1.25\text{м},g_A=0.03\text{м}, g_v=20$.}
-\end{figure}
 
 \end{frame}
 
@@ -1182,7 +1194,52 @@ E_1=E_3=2.1\cdot 10^{11} Па, v_{13}=v_{31}=0.3, G_{13}=8.1\cdot 10^{10} Па, 
 \begin{figure}
 	\includegraphics[scale=0.3]{pic/corrugated_nonlinear.png}
 		\caption{Амплітудно-частотні характеристики гофрованої панелі для різних значень частоти гофрувань $g_v$.}
-		\label{fig:omage_K_h}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Розділ 5}
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{
+ \begin{tabular}{| c | c | c | c | c | c | c | c | c |} 
+ \hline
+ $g_A$, м & 0 & 0.015 & 0.03 & 0.06 & 0.1 & 0.2 & 0.25 & 0.3 \\ 
+  \hline
+ $\omega$, Гц & 101 & 143 & 217 & 377 & 622 & 675 & 552 & 461\\
+   \hline
+\end{tabular}}
+\caption{Залежність найменшої власної частоти ($\omega$) від амплітуди гофрування ($g_A$) панелі.}
+\label{table:51}
+\end{table}
+
+\begin{figure}
+	\includegraphics[scale=0.25]{pic/corrugated_ampl_linear.png}
+		\caption{Залежність найменшої власної частоти ($\omega$) від амплітуди гофрування ($g_A$) панелі.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Розділ 5}
+
+\begin{figure}[h]
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=\linewidth]{pic/cor_geom_ga0.png} \\ а)}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.49\linewidth}
+\center{\includegraphics[width=\linewidth]{pic/cor_geom_ga01.png} \\ б)}
+\end{minipage}
+\includegraphics[width=0.49\linewidth]{pic/cor_geom_ga03.png} \\ в)
+\caption{Вигляд гофрованої циліндричної панелі при \\а) $g_A = 0м$; б) $g_A = 0.1м$; в) $g_A = 0.3м$.}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Розділ 5}
+
+\begin{figure}
+	\includegraphics[scale=0.25]{pic/corrugated_ampl_nonlinear_s.png}
+		\caption{Амплітудно-частотні характеристики гофрованої панелі для різних значень частоти гофрувань $g_А$.}
 \end{figure}
 
 \end{frame}
