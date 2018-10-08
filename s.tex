@@ -66,7 +66,7 @@
 \section{Розділ 1}
 
 \begin{frame}{Розділ 1. Основні методи і результати теоретичних досліджень за проблемою визначення  амплітудно-частотних характеристик шаруватих пластин і циліндричних оболонок за лінійного та геометрично нелінійного деформування.}
-\textbf{Огляд публікацій за проблемою теоретичного аналізу лінійних і нелінійних коливань оболонок і пластин}\\[3mm]
+\textbf{Огляд публікацій за проблемою теоретичного аналізу лінійних і нелінійних коливань оболонок та пластин}\\[3mm]
 \indent Дослідження процесів лінійних та нелінійних коливань тонкостінних елементів конструкцій із традиційних матеріалів було започатковано на основі використання класичної теорії, що базується на гіпотезі Кірхгофа-Лява. Фундаментальні результати в цьому напрямку отримані в працях В. З. Власова, Й. І. Воровича, К. З. Галімова, О. Л. Гольденвейзера, Л. Донелла, М. А. Колтунова, А. І. Лур’є, К. Маргерра, Х. М. Муштарі, В. В. Новожилова, П. М. Огібалова, С. П. Тимошенка, К. Ф. Черниха, та інших учених. 
 
 \medskip 
@@ -130,7 +130,7 @@ G ^k _{ij} &= \frac12 \sum_{m=1}^{3} g^{km}
 \end{frame}
 
 \begin{frame}{Розділ 2}
-\emph{Рівняння руху точок шару}
+\emph{Рівняння руху}
 \begin{equation} \label{eq:P}
 div \hat{P} = \rho \frac{\partial^2 \vec{u}}{\partial t^2},
 \end{equation}
@@ -198,23 +198,22 @@ B \cdot \tilde{u},
 де \\
 \begin{equation}
 \vec{\nabla} \vec{u} =  \left(
-\nabla_1 u_1  \nabla_2 u_1  \nabla_3 u_1 \nabla_1 u_2  \nabla_2 u_2  \nabla_3 u_2 
-\nabla_1 u_3  \nabla_2 u_3  \nabla_3 u_3 
-\right)^T,
+\nabla_1 u_1,  \nabla_2 u_1,  \nabla_3 u_1, \nabla_1 u_2,  \nabla_2 u_2,  \nabla_3 u_2, 
+\nabla_1 u_3,  \nabla_2 u_3,  \nabla_3 u_3 \right)^T,
 \end{equation}
 \begin{equation}
- \tilde{u} =  \left( u_1 
-\frac { \partial u_1 } { \partial \alpha_1} 
-\frac { \partial u_1 } { \partial \alpha_2} 
-\frac { \partial u_1 } { \partial \alpha_3} 
-u_2 
-\frac { \partial u_2 } { \partial \alpha_1} 
-\frac { \partial u_2 } { \partial \alpha_2} 
-\frac { \partial u_2 } { \partial \alpha_3} 
-u_3 
-\frac { \partial u_3 } { \partial \alpha_1} 
-\frac { \partial u_3 } { \partial \alpha_2} 
-\frac { \partial u_3 } { \partial \alpha_3} 
+ \tilde{u} =  \left( u_1,
+\frac { \partial u_1 } { \partial \alpha_1}, 
+\frac { \partial u_1 } { \partial \alpha_2}, 
+\frac { \partial u_1 } { \partial \alpha_3}, 
+u_2, 
+\frac { \partial u_2 } { \partial \alpha_1},
+\frac { \partial u_2 } { \partial \alpha_2}, 
+\frac { \partial u_2 } { \partial \alpha_3}, 
+u_3, 
+\frac { \partial u_3 } { \partial \alpha_1}, 
+\frac { \partial u_3 } { \partial \alpha_2}, 
+\frac { \partial u_3 } { \partial \alpha_3}
 \right)^T,
 \end{equation}
 матриця $B$
@@ -243,28 +242,28 @@ B=
 де 
 \begin{align}
 \vec{\varepsilon} = \left(
-\varepsilon_{11}\,
-\varepsilon_{22}\,
-\varepsilon_{33}\,
-2\varepsilon_{12}\,
-2\varepsilon_{13}\,
-2\varepsilon_{23}\,
+\varepsilon_{11},
+\varepsilon_{22},
+\varepsilon_{33},
+2\varepsilon_{12},
+2\varepsilon_{13},
+2\varepsilon_{23}
 \right)^T,\\
 \vec{e} = \left( 
-e_{11}\,
-e_{22}\,
-e_{33}\,
-2e_{12}\,
-2e_{13}\,
-2e_{23}\,
+e_{11},
+e_{22},
+e_{33},
+2e_{12},
+2e_{13},
+2e_{23}
 \right)^T,\\
 \vec{\eta} = \left( 
-\eta_{11}\,
-\eta_{22}\,
-\eta_{33}\,
-2\eta_{12}\,
-2\eta_{13}\,
-2\eta_{23}\,
+\eta_{11},
+\eta_{22},
+\eta_{33},
+2\eta_{12},
+2\eta_{13},
+2\eta_{23}
 \right)^T,
 \end{align}
 матриця $E$:
@@ -453,7 +452,7 @@ e_{331}\left(\alpha_1\right)=u_{30}\left( -\frac{1}{h}-\frac{K\left( \alpha_1 \r
 8-2K^2h^2 & -4+4Kh-K^2h^2 & 16+8Kh-4K^2h^2 \\ 
 16+16Kh+4K^2h^2 & 16+8Kh-4K^2h^2 & 32-4K^2h^2
 \end{array}
-\right],\\
+\right].\\
 \end{aligned}
 \end{equation}
 
@@ -492,22 +491,22 @@ u_{10}
 \begin{frame}{Розділ 2}
 Тоді \eqref{eq:virtwork_gen}:
 \begin{multline}
-\int_0^L \delta\overline{u}'^T \left( E' + E_{NL}' \right)^T C' \left( E' + E_{NL}'^{(1)} \right)\overline{u}' A\left(\alpha_1\right)\, d\alpha_1+\\+\int_0^L \rho_0 \delta\overline{u}'^T B'\frac{\partial^2 \overline{u}'}{\partial t^2} A\left(\alpha_1\right)\, d\alpha_1=F_{out}.
+\int_0^L \delta\overline{u}'^T \left( E' + E_{NL}' \right)^T C' \left( E' + E_{NL}'^{(1)} \right)\overline{u}' A\left(\alpha_1\right)\, d\alpha_1+\\+\int_0^L \rho_0 \delta\overline{u}'^T B'\frac{\partial^2 \overline{u}'}{\partial t^2} A\left(\alpha_1\right)\, d\alpha_1=F_{out},
 \end{multline}
 де
 \[
-\overline{u}' = \left( u_{10}
-\frac { du_{10}} { d \alpha_1}
-u_{11} 
-\frac { du_{11}} { d \alpha_1}
-u_{12}
-\frac { du_{12}} { d \alpha_1} 
-u_{30}
-\frac { du_{30}} { d \alpha_1}
-u_{31} 
-\frac { du_{31}} { d \alpha_1}
-u_{32}
-\frac { du_{32}} { d \alpha_1} 
+\overline{u}' = \left( u_{10},
+\frac { du_{10}} { d \alpha_1},
+u_{11},
+\frac { du_{11}} { d \alpha_1},
+u_{12},
+\frac { du_{12}} { d \alpha_1},
+u_{30},
+\frac { du_{30}} { d \alpha_1},
+u_{31},
+\frac { du_{31}} { d \alpha_1},
+u_{32},
+\frac { du_{32}} { d \alpha_1}
 \right)^T,
 \]
 
@@ -566,7 +565,7 @@ B'_0=h\left[
 
 \section{Розділ 3}
 \begin{frame}{Розділ 3. УЗАГАЛЬНЕНИЙ МЕТОД ЗБУРЕНЬ У ЗАДАЧАХ ПРО КОЛИВАННЯ}
-\textbf{3.1. Скінченно-елементні апроксимації для двовимірних моделей коливань товстостінних і тонкостінних оболонок і пластин.}
+\textbf{3.1. Скінченно-елементні апроксимації для двовимірних моделей коливань товстостінних і тонкостінних оболонок та пластин.}
 \\
 \vspace{1em}
 \begin{equation}
@@ -731,12 +730,12 @@ x_3&=\frac{1}{32\omega ^2}\overline{\phi}^T K_{NL}^{(2)}\left( A\overline{\phi},
 \end{align}
 Загальний розв'язок \eqref{eq:nonlineq}:
 \begin{equation}
-\overline{U}\left(t\right)=\left[\left(A-x_1-x_2-x_3\right)\cos \omega t + x_1+x_2\cos 2 \omega t+x_3\cos 3 \omega t\right]\overline{\phi}.
+\overline{U}\left(t\right)=\left[\left(A-\mu(x_1+x_2+x_3)\right)\cos \omega t +\mu x_1+ \mu x_2\cos 2 \omega t+ \mu x_3\cos 3 \omega t\right]\overline{\phi}.
 \end{equation}
 \end{frame}
 
 \begin{frame}{Розділ 3}
-Алгоритм відшукання розв'язку:
+Методика відшукання розв'язку:
 \begin{enumerate}
 	\item Розв’язання лінійної задачі:
 	$K_L\overline{\phi}+\omega_L^2 M \overline{\phi}=0$.
@@ -769,7 +768,7 @@ x_3&=\frac{1}{32\omega ^2}\overline{\phi}^T K_{NL}^{(2)}\left( A\overline{\phi},
 \item Аналогічним чином застосовано МСЕ до одновимірної варіаційної задачі та отримано однотипну систему нелінійних алгебраїчних рівнянь.
 \item Виведені аналітичні формули для коефіцієнтів лінійних і нелінійних матриць жорсткості та мас, які дозволяють проводити їх швидке обчислення.
 \item Для розв'язання отриманих систем узагальнено метод збурень.
-\item На цій основі розроблено алгоритм знаходження скінченної кількості перших форм і значень власних частот. 
+\item На цій основі розроблено методику знаходження значення нелінійної власної частоти і загального розв'язку задачі. 
 \end{itemize}
 
 \end{frame}
@@ -849,7 +848,7 @@ E_1=E, v_{13}=v_{31}=0.3, G_{13}=G;
 
 Тоді
 \begin{equation}
-\omega^2=\omega_0^2\left(1+\frac{3}{4}R\left(\frac{w_{max}}{h}\right)^2\right)
+\omega^2=\omega_0^2\left(1+\frac{3}{4}X\left(\frac{w_{max}}{h}\right)^2\right)
 \end{equation}
 
 \begin{tabbing}
@@ -858,7 +857,7 @@ E_1=E, v_{13}=v_{31}=0.3, G_{13}=G;
 \end{tabbing}
 
 \begin{equation}
-R=\frac{\overline{\phi}^T K_{NL}^{(2)}\left( h\overline{\phi}',h\overline{\phi}' \right) \overline{\phi}}{\omega_0^2}
+X=\frac{\overline{\phi}^T K_{NL}^{(2)}\left( h\overline{\phi}',h\overline{\phi}' \right) \overline{\phi}}{\omega_0^2}
 \end{equation}
 
 \begin{tabbing}
@@ -870,10 +869,11 @@ R=\frac{\overline{\phi}^T K_{NL}^{(2)}\left( h\overline{\phi}',h\overline{\phi}'
 
 \begin{frame}{Розділ 4}
 \begin{table}[h!]
+\caption{Значення параметра $X$ для різних моделей панелі, видовжені краї якої защемлені}
 \centering
  \begin{tabular}{| l | c |} 
  \hline
- & $R$ \\ 
+ & $X$ \\ 
  \hline
  Аналітичне значення\footnotemark & 0.8363 \\ 
  \hline
@@ -884,23 +884,20 @@ R=\frac{\overline{\phi}^T K_{NL}^{(2)}\left( h\overline{\phi}',h\overline{\phi}'
  Модель на основі просторової теорії & 3.2488 \\
  \hline
 \end{tabular}
-\caption{Значення параметра $R$ для різних моделей панелі, видовжені краї якої защемлені}
-\label{table:1}
 \end{table}
 
 \begin{table}[h!]
+\caption{Значення параметра $X$ для різних моделей панелі, видовжені краї закріплені на нерухомих шарнірах.}
 \centering
  \begin{tabular}{| l | c |} 
  \hline
- & $R$ \\ 
+ & $X$ \\ 
  \hline
  Модель на основі квадратичних апроксимацій & 2.5014 \\ 
  \hline
  Модель на основі просторової теорії & 5.8088 \\
  \hline
 \end{tabular}
-\caption{Значення параметра $R$ для різних моделей панелі, видовжені краї закріплені на нерухомих шарнірах.}
-\label{table:1}
 \end{table}
 
 \footnotetext[1]{Marchuk M., Pakosh V., Lesyk O., Hurayewska I. Influence of Pliability to Transversal Deformations of Shear and Compression on Correlation Frequency from Amplitude for Nonlinear Oscillations of Composite Plates // Vibrations in Physical Systems. - 2006. - Vol. XXII. - P. 251-256.}
@@ -959,14 +956,15 @@ S^{(m)31}\left(\alpha_1, h_{m},t \right)=S^{(m)33}\left(\alpha_1, h_{m},t \right
 \begin{equation}
 \begin{gathered}
 L=1\text{м}, h=0.1\text{м};\\
-\text{Гума:}\qquad
-E_1=E_3=210\cdot 10^{9} Па, v_{13}=v_{31}=0.3, \rho=8000 кг/м^3;\\
 \text{Сталь:}\qquad
+E_1=E_3=210\cdot 10^{9} Па, v_{13}=v_{31}=0.3, \rho=8000 кг/м^3;\\
+\text{Гума:}\qquad
 E_1=E_3=0.1\cdot 10^{9} Па, v_{13}=v_{31}=0.48, \rho=1200 кг/м^3.
 \end{gathered}
 \end{equation}
 
 \begin{table}[h!]
+\caption{Вплив товщини шару гуми ($h_{r}$) на мінімальну власну частоту}
 \centering
  \begin{tabular}{| c | c | c | c | c | c | c | c |} 
  \hline
@@ -975,21 +973,18 @@ E_1=E_3=0.1\cdot 10^{9} Па, v_{13}=v_{31}=0.48, \rho=1200 кг/м^3.
  $\omega_0$, Гц & 25.061 & 72.121 & 69.587 & 69.056 & 84.453 & 111.765 & 375.763 \\
    \hline
 \end{tabular}
-\caption{Вплив товщини шару гуми ($h_{r}$) на мінімальну власну частоту}
-\label{table:2}
 \end{table}
 
 \begin{table}[h!]
+\caption{Вплив товщини шару гуми ($h_{r}$) на значення параметра нелінійності $X$}
 \centering
  \begin{tabular}{| c | c | c | c | c | c | c | c |} 
  \hline
  $\displaystyle \frac{h_{r}}{h}$ & 1 & 0.95 & 0.9 & 0.8 & 0.6 & 0.4 & 0 \\ 
   \hline
- $R$ & 16.1053 & 44.0470 & 73.2043 & 104.7005 & 92.1796 & 59.2721 & 5.7266 \\
+ $X$ & 16.1053 & 44.0470 & 73.2043 & 104.7005 & 92.1796 & 59.2721 & 5.7266 \\
    \hline
 \end{tabular}
-\caption{Вплив товщини шару гуми ($h_{r}$) на значення параметра нелінійності $R$}
-\label{table:3}
 \end{table}
 
 \end{frame}
@@ -1019,16 +1014,15 @@ E_1=40E_3, v_{13}=v_{31}=0.25, G_{13}=0.6E_3.
 \end{equation}
 
 \begin{table}[h!]
+\caption{Вплив кривини напрямної ($K$) на значення параметра $X$}
 \centering
  \begin{tabular}{| c | c | c | c | c | c |} 
  \hline
  $K, м^{-1}$ & 0.5 & 0.8 & 1 & 1.5 & 2 \\ 
   \hline
- $R$ & 4.442 & 4.203 & 4.002 & 3.421 & 2.855 \\
+ $X$ & 4.442 & 4.203 & 4.002 & 3.421 & 2.855 \\
    \hline
 \end{tabular}
-\caption{Вплив кривини напрямної ($K$) на значення параметра нелінійності $R$}
-\label{table:4}
 \end{table}
 \end{frame}
 
@@ -1052,7 +1046,7 @@ E_1=40E_3, v_{13}=v_{31}=0.25, G_{13}=0.6E_3.
 \begin{minipage}[h]{0.49\linewidth}
 \center{\includegraphics[width=\linewidth]{pic/def_K_2.png} \\ б)}
 \end{minipage}
-\caption{Перша мода циліндричної панелі з вуглепластику для різної кривизни: а)$K=0.8\text{м}^{-1}$; б)   $K=2\text{м}^{-1}$;}
+\caption{Перша мода циліндричної панелі з вуглепластику для різної кривини: а)$K=0.8\text{м}^{-1}$; б)   $K=2\text{м}^{-1}$;}
 \end{figure}
 
 \end{frame}
@@ -1086,12 +1080,12 @@ E_1=40E_3, v_{13}=v_{31}=0.25, G_{13}=0.6E_3.
 \textbf{Висновки до розділу 4}\\
 \vspace{1em}
 \begin{itemize}
-\item На основі розробленого алгоритму (методики) досліджено лінійні і геометрично нелінійні коливання одношарових та тришарових пластин-смуг.
-\item Отримані числові результати порівняно з розв'язками, отриманими іншими авторами дозволили встановити його ефективність шляхом .
+\item На основі розробленої методики досліджено лінійні і геометрично нелінійні коливання одношарових та тришарових пластин-смуг.
+\item Отримані числові результати порівняно з розв'язками, отриманими іншими авторами, що дозволило встановити її ефективність.
 \item Досліджено вплив податливості до трансверсьного зсуву на мінімальну власну частоту одношарової пластини-смуги.
 \item Отримано аналітичну формулу для обчислення власної частоти за нелінійних коливань через значення лінійної власної частоти, нелінійної матриці жорсткості та лінійних власних векторів.
 \item У випадку тришарової пластини смуги, що складається двох металевих лицевих та гумового середнього елементів, встановлено, що зі зростанням товщини гумового шару, мінімальна лінійна власна частота спадає. Встановлено, що максимальне значення нелінійної  першої власної частоти досягається при 80\% заповнені пластини смуги гумовим складником. 
-\item Для циліндричної панелі встановлено, що зі зростанням кривизни вона стає менш жорсткою за нелінійних коливань. Максимальне значення власної лінійної частоти досягається при $K=0.7 м^{-1}$ та при $h=0.1 м$.
+\item Для циліндричної панелі встановлено, що зі зростанням кривини вона стає менш жорсткою за нелінійних коливань. Максимальне значення власної лінійної частоти досягається при $K=0.7 м^{-1}$ та при $h=0.1 м$.
 \end{itemize}
 
 \end{frame}
@@ -1163,7 +1157,7 @@ x_3&=\left(R + g_{A}\cos\left(g_v\theta\right) \right)\sin\left(\theta\right),
 \end{frame}
 
 \begin{frame}{Розділ 5}
-Коефіцієнт першої квадратичної форми і головна кривизна
+Коефіцієнт першої квадратичної форми і головна кривина
 \begin{gather}
 A\left(\alpha_1\right) = \sqrt{w^2+z^2},\\
 K\left(\alpha_1\right) = \frac{\left(wy+2z^2/R\right)}{A\left(\alpha_1\right)^{\frac{3}{2}}},
@@ -1190,6 +1184,7 @@ E_1=E_3=2.1\cdot 10^{11} Па, v_{13}=v_{31}=0.3, G_{13}=8.1\cdot 10^{10} Па,\
 \end{equation}
 
 \begin{table}[h!]
+\caption{Залежність найменшої власної частоти ($\omega$) від частоти гофрування ($g_v$) панелі}
 \centering
 \resizebox{\textwidth}{!}{
  \begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |} 
@@ -1199,8 +1194,6 @@ E_1=E_3=2.1\cdot 10^{11} Па, v_{13}=v_{31}=0.3, G_{13}=8.1\cdot 10^{10} Па,\
  $\omega$, Гц & 105 & 98 & 92 & 110 & 132 & 217 & 2588 & 8007 & 11138 & 20220 & 18239 & 12042\\
    \hline
 \end{tabular}}
-\caption{Залежність найменшої власної частоти ($\omega$) від частоти гофрування ($g_v$) панелі}
-\label{table:51}
 \end{table}
 
 \begin{figure}[h]
@@ -1244,6 +1237,7 @@ E_1=E_3=2.1\cdot 10^{11} Па, v_{13}=v_{31}=0.3, G_{13}=8.1\cdot 10^{10} Па,\
 
 \begin{frame}{Розділ 5}
 \begin{table}[h!]
+\caption{Залежність найменшої власної частоти ($\omega$) від амплітуди гофрування ($g_A$) панелі.}
 \centering
 \resizebox{\textwidth}{!}{
  \begin{tabular}{| c | c | c | c | c | c | c | c | c |} 
@@ -1253,8 +1247,6 @@ E_1=E_3=2.1\cdot 10^{11} Па, v_{13}=v_{31}=0.3, G_{13}=8.1\cdot 10^{10} Па,\
  $\omega$, Гц & 101 & 143 & 217 & 377 & 622 & 675 & 552 & 461\\
    \hline
 \end{tabular}}
-\caption{Залежність найменшої власної частоти ($\omega$) від амплітуди гофрування ($g_A$) панелі.}
-\label{table:51}
 \end{table}
 
 \begin{figure}
@@ -1283,17 +1275,17 @@ E_1=E_3=2.1\cdot 10^{11} Па, v_{13}=v_{31}=0.3, G_{13}=8.1\cdot 10^{10} Па,\
 \textbf{5.3. Геометрично нелінійні коливання.}
 
 \begin{table}[h!]
+\caption{Вплив частоти гофрування ($g_v$) на значення параметра нелінійності $X$}
 \centering
  \begin{tabular}{| c | c | c | c | c | c |} 
  \hline
  $g_v$ & 2 & 6 & 15 & 20 & 50 \\ 
   \hline
- $R$ & 6.6324 & 7.5217 & 2.9688 & 1.2465 & 0.0728 \\
+ $X$ & 6.6324 & 7.5217 & 2.9688 & 1.2465 & 0.0728 \\
    \hline
 \end{tabular}
-\caption{Вплив частоти гофрування ($g_v$) на значення параметра нелінійності $R$}
-\label{table:4}
 \end{table}
+
 \begin{figure}
 	\includegraphics[scale=0.23]{pic/corrugated_nonlinear.png}
 		\caption{Амплітудно-частотні характеристики гофрованої панелі для різних значень частоти гофрувань $g_v$.}
@@ -1304,16 +1296,15 @@ E_1=E_3=2.1\cdot 10^{11} Па, v_{13}=v_{31}=0.3, G_{13}=8.1\cdot 10^{10} Па,\
 \begin{frame}{Розділ 5}
 
 \begin{table}[h!]
+\caption{Вплив амплітуди гофрування ($g_A$) на значення параметра нелінійності $X$}
 \centering
  \begin{tabular}{| c | c | c | c | c | c | c |} 
  \hline
  $g_A, м$ & 0 & 0.03 & 0.1 & 0.2 & 0.25 & 0.3 \\ 
   \hline
- $R$ & 6.5853 & 1.2465 & 0.0815 & 2.4986 & 7.5377 & 40.1717 \\
+ $X$ & 6.5853 & 1.2465 & 0.0815 & 2.4986 & 7.5377 & 40.1717 \\
    \hline
 \end{tabular}
-\caption{Вплив амплітуди гофрування ($g_A$) на значення параметра нелінійності $R$}
-\label{table:4}
 \end{table}
 \begin{figure}
 	\includegraphics[scale=0.21]{pic/corrugated_ampl_nonlinear_s.png}
@@ -1365,7 +1356,7 @@ E_1=E_3=2.1\cdot 10^{11} Па, v_{13}=v_{31}=0.3, G_{13}=8.1\cdot 10^{10} Па,\
 \vspace{1em}
 \begin{itemize}
 \item  Досліджено геометрично нелінійні коливання тришарових пластин-смуг та циліндричних видовжених панелей. У випадку пластини-смуги, що складається з двох металевих лицевих та гумового середнього шарів, встановлено, що зі зростанням товщини гумового шару, мінімальна лінійна власна частота спадає, а також, що максимальне значення нелінійної першої власної частоти досягається при 80\% заповнені пластини смуги гумовим складником. 
-\item Для циліндричної панелі встановлено, що зі зростанням кривизни вона стає менш жорсткою за нелінійних коливань. Максимальне значення мінімальної власної лінійної частоти досягається при $K=0.7 м^{-1}$ та при $h=0.1 м$.
+\item Для циліндричної панелі встановлено, що зі зростанням кривини вона стає менш жорсткою за нелінійних коливань. Максимальне значення мінімальної власної лінійної частоти досягається при $K=0.7 м^{-1}$ та при $h=0.1 м$.
 \item  Для гофрованої в коловому напрямку видовженої циліндричної палені встановлено, що зі зростанням частоти гофрування $g_v \in [2;6]$ вона стає більш жорсткою, а при $g_v > 6$ стає менш жорсткою за нелінійних коливань. Також зі зростанням амплітуди гофрування $g_A$ на проміжку від 0м до 0.1м вона стає менш жорсткою за нелінійних коливань. Подальше збільшення параметра $g_A$ призводить до зростання жорсткі оболонки.
 
 %\item Проаналізовані
