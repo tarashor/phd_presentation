@@ -179,26 +179,6 @@ u^{i}\vline _{t=t_0} = u^i_0 \left( \alpha_1, \alpha_2, \alpha_3 \right), \frac{
 
 \end{frame}
 
-\begin{frame}{Розділ 2}
-\textbf{Локальна система координат.}\\
-\vspace{1em}
-Змішана криволінійна ортогональна система координат:
-\begin{gather}
-g_{11}=H_1^2, g_{22}=H_2^2, g_{33}=1, \\
-g_{ij}=0, i,j=1,2,3, i \ne j;
-\end{gather}
-Довільна циліндрична система координат
-\begin{align}
-H_1 = H_1 \left( \alpha_1, \alpha_2, \alpha_3 \right) &= A \left( \alpha_1 \right) \left( 1+ \alpha_3 K \left( \alpha_1 \right) \right),  \\
-H_2 = H_2 \left( \alpha_1, \alpha_2, \alpha_3 \right) &= 1,
-\end{align}
-
-\begin{tabbing}
-де \= $  A \left( \alpha_1 \right)$ --- коефіцієнт першої квадратичної форми серединної поверхні оболонки,\\
-\> $K \left( \alpha_1 \right)$ --- головна кривина напрямної в напрямку осі $\alpha_1$.
-\end{tabbing}
-
-\end{frame}
 
 
 \begin{frame}{Розділ 2}
@@ -225,9 +205,13 @@ $h$ --- товщина шару.
 \end{frame}
 
 \begin{frame}{Розділ 2}
+\begin{figure}
+\includegraphics[scale=0.25]{pic/cylplate_2D.png}
+\caption{Циліндричний шар в декартовій системі координат.}
+\end{figure}
 \begin{equation}
 \begin{aligned}
-&\varepsilon_{ij} \left( \alpha_1, \alpha_3 \right) = \frac{\varepsilon_{ij0} \left( \alpha_1\right)p_0 \left( \alpha_3\right)+\varepsilon_{ij1} \left( \alpha_1\right)p_1 \left( \alpha_3\right)+\varepsilon_{ij2} \left( \alpha_1\right)p_2 \left( \alpha_3\right)}{1+\alpha_3 K},\\
+&\varepsilon_{ij} \left( \alpha_1, \alpha_3 \right) = \frac{\varepsilon_{ij0} \left( \alpha_1\right)p_0 \left( \alpha_3\right)+\varepsilon_{ij1} \left( \alpha_1\right)p_1 \left( \alpha_3\right)+\varepsilon_{ij2} \left( \alpha_1\right)p_2 \left( \alpha_3\right)}{1+\alpha_3 K\left( \alpha_1 \right)},\\
 &\varepsilon_{ijk} = e_{ijk}\left( \alpha_1\right)+\eta_{ijk}\left( \alpha_1\right), \quad i,j=1,3, k=0,1,2,
 \end{aligned}
 \end{equation}
@@ -334,6 +318,11 @@ u_{10}
 \right].
 \end{aligned}
 \end{equation}
+
+\begin{tabbing}
+де \= $  A \left( \alpha_1 \right)$ --- коефіцієнт першої квадратичної форми серединної поверхні оболонки,\\
+\> $K \left( \alpha_1 \right)$ --- головна кривина напрямної в напрямку осі $\alpha_1$.
+\end{tabbing}
 
 \end{frame}
 
